@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Name>RevitCommandTemplate</Name>
+		<Assembly>RevitCommandTemplate.dll</Assembly>
+		<AddInId>DB7D96D7-E13A-4597-80AA-ADF123B7AA80</AddInId>
+		<FullClassName>RevitCommandTemplate.SampleCommand</FullClassName>
+		<Text>Sample</Text>
+		<Description>Sample Command</Description>
+		<VendorId>Gernot</VendorId>
+		<VendorDescription>Gernot</VendorDescription>
+		<VisibilityMode>AlwaysVisible</VisibilityMode>
+	</AddIn>
+</RevitAddIns>
