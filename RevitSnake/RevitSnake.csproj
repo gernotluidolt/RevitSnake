@@ -7,8 +7,8 @@
     <ProjectGuid>{0E70586B-B245-43E2-82FB-09B1D612C7F2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RevitCommandTemplate</RootNamespace>
-    <AssemblyName>RevitCommandTemplate</AssemblyName>
+    <RootNamespace>RevitSnake</RootNamespace>
+    <AssemblyName>RevitSnake</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -32,7 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationManifest>RevitCommandTemplate.addin</ApplicationManifest>
+    <ApplicationManifest>RevitSnake.addin</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="RevitAPI">
@@ -51,11 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App.cs" />
     <Compile Include="SampleCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="RevitCommandTemplate.addin">
+    <None Include="RevitSnake.addin">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
