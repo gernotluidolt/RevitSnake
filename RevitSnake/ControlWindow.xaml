@@ -1,0 +1,9 @@
+﻿<Window x:Class="RevitSnake.ControlWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Snake Control" Height="150" Width="200"
+        Topmost="True">
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Use WASD to move the snake" />
+    </Grid>
+</Window>

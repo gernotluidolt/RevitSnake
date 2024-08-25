@@ -5,10 +5,7 @@
 		<Assembly>RevitSnake.dll</Assembly>
 		<AddInId>9979AFFF-E20C-4F3C-ACD8-EABEF6A30D3F</AddInId>
 		<FullClassName>RevitSnake.App</FullClassName>
-		<Text>Sample</Text>
-		<Description>Sample Command</Description>
-		<VendorId>Gernot</VendorId>
-		<VendorDescription>Gernot</VendorDescription>
-		<VisibilityMode>AlwaysVisible</VisibilityMode>
+		<VendorId>lt.luido</VendorId>
+		<VendorDescription>Gernot Luidolt</VendorDescription>
 	</AddIn>
 </RevitAddIns>
