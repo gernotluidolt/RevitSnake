@@ -29,5 +29,19 @@ namespace RevitSnake
                     break;
             }
         }
+
+        private void PauseButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Game.isRunning)
+            {
+                Game.isRunning = false;
+                PauseButton.Content = "Resume";
+            }
+            else
+            {
+                Game.isRunning = true;
+                PauseButton.Content = "Pause";
+            }
+        }
     }
 }
