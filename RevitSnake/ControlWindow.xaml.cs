@@ -43,5 +43,13 @@ namespace RevitSnake
                 PauseButton.Content = "Pause";
             }
         }
+
+        public void UpdateScore()
+        {
+            Dispatcher.Invoke(() =>
+            {
+                ScoreTextBlock.Text = $"Score: {Game.score}";
+            });
+        }
     }
 }

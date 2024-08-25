@@ -2,6 +2,8 @@
 using System;
 using System.Reflection;
 using Autodesk.Revit.UI.Events;
+using System.Windows.Media.Imaging;
+using System.IO;
 
 namespace RevitSnake
 {
@@ -17,7 +19,9 @@ namespace RevitSnake
 
             string path = Assembly.GetExecutingAssembly().Location;
 
+            BitmapSource snekImage = GetEmbeddedImage("RevitSnake.resource.snek.png");
             PushButtonData buttonData = new PushButtonData("StartSnakeBtn", "Start Game", path, "RevitSnake.SetupCommand");
+            buttonData.LargeImage = snekImage;
 
             PushButton pushButton = ribbonPanel.AddItem(buttonData) as PushButton;
             pushButton.ToolTip = "Start the snake game";
@@ -47,6 +51,12 @@ namespace RevitSnake
                     Game.MoveSnake();
                 }
             }
+        }
+        static BitmapSource GetEmbeddedImage(string name)
+        {
+            Assembly a = Assembly.GetExecutingAssembly();
+            Stream s = a.GetManifestResourceStream(name);
+            return BitmapFrame.Create(s);
         }
     }
 }

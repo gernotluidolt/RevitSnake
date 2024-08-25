@@ -50,6 +50,7 @@ namespace RevitSnake
             }
             else
             {
+                Game.snakePositions.Clear();
                 using (Transaction t = new Transaction(doc, "Clear Grid"))
                 {
                     t.Start();

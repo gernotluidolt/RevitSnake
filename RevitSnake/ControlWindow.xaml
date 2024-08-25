@@ -5,8 +5,22 @@
         Topmost="True">
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Use WASD to move the snake" />
-            <Button Name="PauseButton" Content="Pause" Width="100" Height="30" Margin="10" Click="PauseButton_Click"/>
+            <TextBlock x:Name="InstructionsTextBlock" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       TextWrapping="Wrap"
+                       Text="Click here and use WASD to move the snake" />
+            <TextBlock x:Name="ScoreTextBlock" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       FontSize="16" 
+                       Margin="10"/>
+            <Button Name="PauseButton" 
+                    Content="Pause" 
+                    Width="100" 
+                    Height="30" 
+                    Margin="10" 
+                    Click="PauseButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>

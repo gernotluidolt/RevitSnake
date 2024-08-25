@@ -17,6 +17,7 @@ namespace RevitSnake
 
         public static bool gameOver = false;
         public static bool isRunning = false;
+        public static int score = 0;
 
         private static Random random = new Random();
         private static ControlWindow controlWindow;
@@ -35,13 +36,13 @@ namespace RevitSnake
 
         public static void InitializeGame(int initialLength, int gridSize)
         {
+            score = 0;
             if (controlWindow == null)
             {
                 controlWindow = new ControlWindow();
                 controlWindow.Show();
             }
 
-            System.Threading.Thread.Sleep(2000);
 
             int startX = gridSize / 2;
             int startY = gridSize / 2;
@@ -87,6 +88,8 @@ namespace RevitSnake
             if (newHead == foodPosition)
             {
                 snakePositions.Add(newHead);
+                score++;
+                
                 SpawnFood();
             }
             else
@@ -96,7 +99,7 @@ namespace RevitSnake
                 SetupCommand.SetCellValue(snakePositions[0].x, snakePositions[0].y, "Field");
                 snakePositions.RemoveAt(0);
             }
-
+            controlWindow.UpdateScore();
             UpdateGrid();
         }
 
